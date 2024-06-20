@@ -56,7 +56,7 @@ public abstract class Produto {
 	}
 
 	public void visualizarProduto() {
-		System.out.println("Informações do produto:");
+		System.out.println("\nInformações do produto:");
 		System.out.println("ID: " + id);
 		if (categoria == 1) {
 			System.out.println("Categoria: Jogos");
@@ -66,6 +66,7 @@ public abstract class Produto {
 		System.out.println("Nome: " + nome);
 		System.out.println("Quantidade: " + quantidade);
 		System.out.printf("Preço: R$ %.2f\n", preco);
+		System.out.printf("Valor total em estoque: R$ %.2f\n", preco * quantidade);
 	}
 
 }
