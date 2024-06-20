@@ -148,12 +148,12 @@ public class Menu {
 							produtos.atualizarProduto(new Perfumaria(id, nome, categoria, preco, quantidade, marca, volume));
 						} 
 						default -> {
-							System.out.println("Tipo de conta inválido!");
+							System.out.println("Tipo de produto inválido!");
 						}
 					}
 					
 				} else {
-					System.out.println("A Conta não foi encontrada!");
+					System.out.println("O produto não foi encontrado!");
 				}
 				
 				keyPress();
