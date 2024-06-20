@@ -2,6 +2,9 @@ package ecommerce;
 
 import java.util.Scanner;
 
+import ecommerce.model.Jogos;
+import ecommerce.model.Perfumaria;
+
 public class Menu {
 
 	public static void main(String[] args) {
@@ -10,7 +13,14 @@ public class Menu {
 		
 		int opc;
 		
+		Jogos jg1 = new Jogos(1,"jogos", "RE4", 150.0f, 4, "PS4", "Terror");
+		jg1.visualizarProduto();
+		
+		Perfumaria pf1 = new Perfumaria(2,"perfume", "Y", 450.0f, 5, "Ypo", 75);
+		pf1.visualizarProduto();
+		
 		while (true) {
+			
 			System.out.println("\n*** Menu do E-commerce ***\n");
             System.out.println("1 - Cadastrar produto");
             System.out.println("2 - Listar todos os produtos");
