@@ -1,11 +1,11 @@
 package ecommerce.model;
 
-public class Perfumaria extends Produto{
-	
+public class Perfumaria extends Produto {
+
 	private String marca;
 	private int volume;
-	
-	public Perfumaria(int id, String nome, String categoria, double preco, int quantidade, String marca, int volume) {
+
+	public Perfumaria(int id, String nome, int categoria, double preco, int quantidade, String marca, int volume) {
 		super(id, nome, categoria, preco, quantidade);
 		this.marca = marca;
 		this.volume = volume;
@@ -26,12 +26,12 @@ public class Perfumaria extends Produto{
 	public void setVolume(int volume) {
 		this.volume = volume;
 	}
-	
+
 	@Override
 	public void visualizarProduto() {
 		super.visualizarProduto();
 		System.out.println("Marca: " + this.marca);
 		System.out.println("Volume: " + this.volume + " ml");
 	}
-	
+
 }

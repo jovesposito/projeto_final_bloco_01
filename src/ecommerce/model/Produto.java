@@ -3,11 +3,11 @@ package ecommerce.model;
 public abstract class Produto {
 	private int id;
 	private String nome;
-	private String categoria;
+	private int categoria;
 	private double preco;
 	private int quantidade;
-	
-	public Produto(int id, String nome, String categoria, double preco, int quantidade) {
+
+	public Produto(int id, String nome, int categoria, double preco, int quantidade) {
 		this.id = id;
 		this.nome = nome;
 		this.categoria = categoria;
@@ -30,12 +30,12 @@ public abstract class Produto {
 	public void setNome(String nome) {
 		this.nome = nome;
 	}
-	
-	public String getCategoria() {
+
+	public int getCategoria() {
 		return categoria;
 	}
 
-	public void setCategoria(String categoria) {
+	public void setCategoria(int categoria) {
 		this.categoria = categoria;
 	}
 
@@ -54,15 +54,18 @@ public abstract class Produto {
 	public void setQuantidade(int quantidade) {
 		this.quantidade = quantidade;
 	}
-	
+
 	public void visualizarProduto() {
 		System.out.println("Informações do produto:");
-        System.out.println("ID: " + id);
-        System.out.println("Categoria: " + categoria);
-        System.out.println("Nome: " + nome);
-        System.out.println("Quantidade: " + quantidade);
-        System.out.printf("Preço: R$ %.2f\n", preco);
+		System.out.println("ID: " + id);
+		if (categoria == 1) {
+			System.out.println("Categoria: Jogos");
+		} else {
+			System.out.println("Categoria: Perfumaria");
+		}
+		System.out.println("Nome: " + nome);
+		System.out.println("Quantidade: " + quantidade);
+		System.out.printf("Preço: R$ %.2f\n", preco);
 	}
-	
-	
+
 }
