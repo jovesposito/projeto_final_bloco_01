@@ -27,6 +27,15 @@ public class ecommerceController implements ecommerceRepository {
 	}
 
 	@Override
+	public void buscarPorCategoria(int categoria) {
+		for (var produto : listaProdutos) {
+            if (produto.getCategoria() == categoria) {
+                produto.visualizarProduto();
+            }
+        }
+	}
+	
+	@Override
 	public void buscarPorId(int id) {
 		var produto = buscarNaCollection(id);
 

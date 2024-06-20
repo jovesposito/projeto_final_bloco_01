@@ -9,5 +9,6 @@ public interface ecommerceRepository {
 	public void buscarPorId(int id);
 	public void atualizarProduto(Produto produto);
 	public void deletarProduto(int id);
+	public void buscarPorCategoria(int categoria);
 
 }

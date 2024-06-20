@@ -29,6 +29,7 @@ public class Menu {
 			System.out.println("3 - Buscar produto por ID");
 			System.out.println("4 - Atualizar dados do produto");
 			System.out.println("5 - Deletar produto");
+			System.out.println("6 - Buscar por categoria");
 			System.out.println("0 - Encerrar");
 			System.out.println("\n*** Fim do Menu do E-commerce ***\n");
 			System.out.print("Escolha uma opção: ");
@@ -172,6 +173,16 @@ public class Menu {
 				id = sc.nextInt();
 
 				produtos.deletarProduto(id);
+
+				keyPress();
+				break;
+			case 6:
+				System.out.println("\nBuscar por categoria\n");
+
+				System.out.println("Digite a categoria do produto: ");
+				categoria = sc.nextInt();
+
+				produtos.buscarPorCategoria(categoria);
 
 				keyPress();
 				break;
